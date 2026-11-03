@@ -1,0 +1,7 @@
+Code and data for the mixed-order sGB-dCS rotating black hole paper
+
+Pure-sector inputs, mixed-order solver, solved 30x30 solutions for
+a = 0.10-0.90, observable and validation scripts, and their outputs.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01FH5rxhroTpy8Y42uKf9hW3
