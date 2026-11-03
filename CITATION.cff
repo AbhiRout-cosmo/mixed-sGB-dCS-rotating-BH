@@ -21,7 +21,6 @@ preferred-citation:
     - family-names: Altschul
       given-names: Brett
   year: 2026
-  journal: "Physical Review D (submitted)"
 references:
   - type: article
     title: "Analytic and accurate approximate metrics for black holes with arbitrary rotation in beyond-Einstein gravity using spectral methods"

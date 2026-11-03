@@ -2,7 +2,7 @@
 
 Code and data for
 
-> A. Rout and B. Altschul, *Mixed-Order Parity-Violating Corrections to Rotating Black Holes in Combined Scalar Gauss–Bonnet and Dynamical Chern–Simons Gravity*, submitted to Physical Review D (2026). arXiv number to follow.
+> A. Rout and B. Altschul, *Mixed-Order Parity-Violating Corrections to Rotating Black Holes in Combined Scalar Gauss–Bonnet and Dynamical Chern–Simons Gravity* (2026), arXiv number to follow.
 
 The pure-sector (leading-order sGB and dCS) solutions on which the mixed-order calculation is built are those of
 
