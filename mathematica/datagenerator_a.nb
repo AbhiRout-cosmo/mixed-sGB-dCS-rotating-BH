@@ -1,0 +1,517 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     19626,        509]
+NotebookOptionsPosition[     18627,        485]
+NotebookOutlinePosition[     19031,        501]
+CellTagsIndexPosition[     18988,        498]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "===", "===", "===", "===", "===", "===", "===", "===", "===", "===", "===",
+     "===", "===", "===", 
+    RowBox[{"==", 
+     RowBox[{"1.", " ", "Import", " ", "all", " ", "functions"}]}], "===", "===",
+     "===", "===", "===", "===", "===", "===", "===", "===", "===", "===", "===",
+     "===", "=="}], "*)"}], 
+  RowBox[{"(*", 
+   RowBox[{"Scalar", " ", "fields"}], "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"DownValues", "[", "dCSPhiFunc", "]"}], "=", 
+     RowBox[{
+     "Import", 
+      "[", "\"\<C:\\\\Users\\\\Abhishek\\\\Downloads\\\\dCSPhiFunc_symbolic.\
+wdx\>\"", "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"DownValues", "[", "sGBPhiFunc", "]"}], "=", 
+     RowBox[{
+     "Import", 
+      "[", "\"\<C:\\\\Users\\\\Abhishek\\\\Downloads\\\\sGBPhiFunc_symbolic.\
+wdx\>\"", "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{"dCS", " ", "metric", " ", "corrections"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"DownValues", "[", "dCSH1Func", "]"}], "=", 
+     RowBox[{
+     "Import", 
+      "[", "\"\<C:\\\\Users\\\\Abhishek\\\\Downloads\\\\dCSH1Func_symbolic.\
+wdx\>\"", "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"DownValues", "[", "dCSH2Func", "]"}], "=", 
+     RowBox[{
+     "Import", 
+      "[", "\"\<C:\\\\Users\\\\Abhishek\\\\Downloads\\\\dCSH2Func_symbolic.\
+wdx\>\"", "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"DownValues", "[", "dCSH3Func", "]"}], "=", 
+     RowBox[{
+     "Import", 
+      "[", "\"\<C:\\\\Users\\\\Abhishek\\\\Downloads\\\\dCSH3Func_symbolic.\
+wdx\>\"", "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"DownValues", "[", "dCSH4Func", "]"}], "=", 
+     RowBox[{
+     "Import", 
+      "[", "\"\<C:\\\\Users\\\\Abhishek\\\\Downloads\\\\dCSH4Func_symbolic.\
+wdx\>\"", "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"sGB", " ", "metric", " ", "corrections"}], "-", 
+     RowBox[{"raw", " ", "expressions"}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"sGBH1Raw", "=", 
+     RowBox[{
+     "Import", 
+      "[", "\"\<C:\\\\Users\\\\Abhishek\\\\Downloads\\\\sGBH1Expr_raw.wdx\>\"",
+       "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"sGBH2Raw", "=", 
+     RowBox[{
+     "Import", 
+      "[", "\"\<C:\\\\Users\\\\Abhishek\\\\Downloads\\\\sGBH2Expr_raw.wdx\>\"",
+       "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"sGBH3Raw", "=", 
+     RowBox[{
+     "Import", 
+      "[", "\"\<C:\\\\Users\\\\Abhishek\\\\Downloads\\\\sGBH3Expr_raw.wdx\>\"",
+       "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"sGBH4Raw", "=", 
+     RowBox[{
+     "Import", 
+      "[", "\"\<C:\\\\Users\\\\Abhishek\\\\Downloads\\\\sGBH4Expr_raw.wdx\>\"",
+       "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "===", "===", "===", "===", "===", "===", "===", "===", "===", "===", "===",
+      "===", "===", "===", 
+     RowBox[{"==", 
+      RowBox[{
+      "2.", " ", "Functionalize", " ", "sGB", " ", "metric", " ", 
+       "corrections"}]}], "===", "===", "===", "===", "===", "===", "===", "===",
+      "===", "===", "===", "===", "===", "===", "=="}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"sGBH1Func", "[", 
+      RowBox[{"z_", ",", "chi_", ",", "a_"}], "]"}], ":=", 
+     RowBox[{"Evaluate", "[", "sGBH1Raw", "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"sGBH2Func", "[", 
+      RowBox[{"z_", ",", "chi_", ",", "a_"}], "]"}], ":=", 
+     RowBox[{"Evaluate", "[", "sGBH2Raw", "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"sGBH3Func", "[", 
+      RowBox[{"z_", ",", "chi_", ",", "a_"}], "]"}], ":=", 
+     RowBox[{"Evaluate", "[", "sGBH3Raw", "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"sGBH4Func", "[", 
+      RowBox[{"z_", ",", "chi_", ",", "a_"}], "]"}], ":=", 
+     RowBox[{"Evaluate", "[", "sGBH4Raw", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "===", "===", "===", "===", "===", "===", "===", "===", "===", "===", "===",
+      "===", "===", "===", 
+     RowBox[{"==", 
+      RowBox[{"3.", " ", "Get", " ", "Notebook", " ", "Directory"}]}], "===", 
+     "===", "===", "===", "===", "===", "===", "===", "===", "===", "===", "===",
+      "===", "===", "=="}], "*)"}], 
+   RowBox[{"(*", 
+    RowBox[{
+    "Get", " ", "the", " ", "directory", " ", "where", " ", "this", " ", 
+     "notebook", " ", "is", " ", "saved"}], "*)"}], 
+   RowBox[{
+    RowBox[{"notebookDir", "=", 
+     RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"If", " ", "running", " ", "in", " ", "a", " ", "notebook"}], ",", 
+     RowBox[{
+      RowBox[{"use", " ", "its", " ", "directory"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+      "otherwise", " ", "fallback", " ", "to", " ", "current", " ", "working",
+        " ", "directory"}]}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"notebookDir", "===", "$Failed"}], ",", 
+      RowBox[{"exportDir", "=", 
+       RowBox[{"Directory", "[", "]"}]}], ",", 
+      RowBox[{"exportDir", "=", "notebookDir"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<Exporting to: \>\"", ",", "exportDir"}], "]"}], ";"}], "\n",
+    "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "===", "===", "===", "===", "===", "===", "===", "===", "===", "===", "===",
+      "===", "===", "===", 
+     RowBox[{"==", 
+      RowBox[{
+       RowBox[{"3.", " ", "Grid", " ", "Parameters"}], "-", 
+       RowBox[{"30", "\[Times]", "30"}]}]}], "===", "===", "===", "===", "===",
+      "===", "===", "===", "===", "===", "===", "===", "===", "===", "=="}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Nz", "=", "30"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Nchi", "=", "30"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"fixedA", "=", "0.32"}], ";"}], "  ", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"CHANGE", " ", "THIS", " ", "FOR", " ", "EACH", " ", 
+      RowBox[{"SPIN", ":", "0.1"}]}], ",", "0.2", ",", "...", ",", "0.9"}], 
+    "*)"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{"zGrid", "=", 
+     RowBox[{"N", "[", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Cos", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"Pi", "*", "i"}], ")"}], "/", "Nz"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "0", ",", "Nz"}], "}"}]}], "]"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"chiGrid", "=", 
+     RowBox[{"N", "[", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"Cos", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"Pi", "*", "j"}], ")"}], "/", "Nchi"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"j", ",", "0", ",", "Nchi"}], "}"}]}], "]"}], "]"}]}], ";"}],
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "===", "===", "===", "===", "===", "===", "===", "===", "===", "===", "===",
+      "===", "===", "===", 
+     RowBox[{"==", 
+      RowBox[{"4.", " ", "Compute", " ", "all", " ", "matrices"}]}], "===", "===",
+      "===", "===", "===", "===", "===", "===", "===", "===", "===", "===", "===",
+      "===", "=="}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<Generating data for a = \>\"", ",", "fixedA"}], "]"}], 
+    ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<Grid: \>\"", ",", 
+      RowBox[{"Nz", "+", "1"}], ",", "\"\< z-points \[Times] \>\"", ",", 
+      RowBox[{"Nchi", "+", "1"}], ",", "\"\< chi-points\>\""}], "]"}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Scalar", " ", "fields"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"sGBPhiMatrix", "=", 
+     RowBox[{"N", "[", 
+      RowBox[{"Outer", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"sGBPhiFunc", "[", 
+          RowBox[{"#1", ",", "#2", ",", "fixedA"}], "]"}], "&"}], ",", 
+        "zGrid", ",", "chiGrid"}], "]"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"dCSPhiMatrix", "=", 
+     RowBox[{"N", "[", 
+      RowBox[{"Outer", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"dCSPhiFunc", "[", 
+          RowBox[{"#1", ",", "#2", ",", "fixedA"}], "]"}], "&"}], ",", 
+        "zGrid", ",", "chiGrid"}], "]"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"sGB", " ", "metric", " ", "corrections"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"sGBH1Matrix", "=", 
+     RowBox[{"N", "[", 
+      RowBox[{"Outer", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"sGBH1Func", "[", 
+          RowBox[{"#1", ",", "#2", ",", "fixedA"}], "]"}], "&"}], ",", 
+        "zGrid", ",", "chiGrid"}], "]"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"sGBH2Matrix", "=", 
+     RowBox[{"N", "[", 
+      RowBox[{"Outer", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"sGBH2Func", "[", 
+          RowBox[{"#1", ",", "#2", ",", "fixedA"}], "]"}], "&"}], ",", 
+        "zGrid", ",", "chiGrid"}], "]"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"sGBH3Matrix", "=", 
+     RowBox[{"N", "[", 
+      RowBox[{"Outer", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"sGBH3Func", "[", 
+          RowBox[{"#1", ",", "#2", ",", "fixedA"}], "]"}], "&"}], ",", 
+        "zGrid", ",", "chiGrid"}], "]"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"sGBH4Matrix", "=", 
+     RowBox[{"N", "[", 
+      RowBox[{"Outer", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"sGBH4Func", "[", 
+          RowBox[{"#1", ",", "#2", ",", "fixedA"}], "]"}], "&"}], ",", 
+        "zGrid", ",", "chiGrid"}], "]"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"dCS", " ", "metric", " ", "corrections"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"dCSH1Matrix", "=", 
+     RowBox[{"N", "[", 
+      RowBox[{"Outer", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"dCSH1Func", "[", 
+          RowBox[{"#1", ",", "#2", ",", "fixedA"}], "]"}], "&"}], ",", 
+        "zGrid", ",", "chiGrid"}], "]"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"dCSH2Matrix", "=", 
+     RowBox[{"N", "[", 
+      RowBox[{"Outer", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"dCSH2Func", "[", 
+          RowBox[{"#1", ",", "#2", ",", "fixedA"}], "]"}], "&"}], ",", 
+        "zGrid", ",", "chiGrid"}], "]"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"dCSH3Matrix", "=", 
+     RowBox[{"N", "[", 
+      RowBox[{"Outer", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"dCSH3Func", "[", 
+          RowBox[{"#1", ",", "#2", ",", "fixedA"}], "]"}], "&"}], ",", 
+        "zGrid", ",", "chiGrid"}], "]"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"dCSH4Matrix", "=", 
+     RowBox[{"N", "[", 
+      RowBox[{"Outer", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"dCSH4Func", "[", 
+          RowBox[{"#1", ",", "#2", ",", "fixedA"}], "]"}], "&"}], ",", 
+        "zGrid", ",", "chiGrid"}], "]"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "===", "===", "===", "===", "===", "===", "===", "===", "===", "===", "===",
+      "===", "===", "===", 
+     RowBox[{"==", 
+      RowBox[{
+      "6.", " ", "Export", " ", "to", " ", "Notebook", " ", "Directory"}]}], "===",
+      "===", "===", "===", "===", "===", "===", "===", "===", "===", "===", "===",
+      "===", "===", "=="}], "*)"}], 
+   RowBox[{
+    RowBox[{"fileName", "=", 
+     RowBox[{"\"\<data_a_\>\"", "<>", 
+      RowBox[{"ToString", "[", "fixedA", "]"}], "<>", "\"\<.json\>\""}]}], 
+    ";"}], "\n", 
+   RowBox[{
+    RowBox[{"fullPath", "=", 
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{"exportDir", ",", "fileName"}], "}"}], "]"}]}], ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{"fullPath", ",", 
+      RowBox[{"<|", 
+       RowBox[{
+        RowBox[{"\"\<spin\>\"", "->", "fixedA"}], ",", 
+        RowBox[{"\"\<Nz\>\"", "->", "Nz"}], ",", 
+        RowBox[{"\"\<Nchi\>\"", "->", "Nchi"}], ",", 
+        RowBox[{"\"\<z_nodes\>\"", "->", "zGrid"}], ",", 
+        RowBox[{"\"\<chi_nodes\>\"", "->", "chiGrid"}], ",", 
+        RowBox[{"\"\<sGBPhi\>\"", "->", "sGBPhiMatrix"}], ",", 
+        RowBox[{"\"\<dCSPhi\>\"", "->", "dCSPhiMatrix"}], ",", 
+        RowBox[{"\"\<sGBH1\>\"", "->", "sGBH1Matrix"}], ",", 
+        RowBox[{"\"\<sGBH2\>\"", "->", "sGBH2Matrix"}], ",", 
+        RowBox[{"\"\<sGBH3\>\"", "->", "sGBH3Matrix"}], ",", 
+        RowBox[{"\"\<sGBH4\>\"", "->", "sGBH4Matrix"}], ",", 
+        RowBox[{"\"\<dCSH1\>\"", "->", "dCSH1Matrix"}], ",", 
+        RowBox[{"\"\<dCSH2\>\"", "->", "dCSH2Matrix"}], ",", 
+        RowBox[{"\"\<dCSH3\>\"", "->", "dCSH3Matrix"}], ",", 
+        RowBox[{"\"\<dCSH4\>\"", "->", "dCSH4Matrix"}]}], "|>"}], 
+      ",", "\"\<JSON\>\""}], "]"}], ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<\:2705 Exported: \>\"", ",", "fullPath"}], "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+    "Print", "[", "\"\<\|01f4ca File contains all 10 fields\>\"", "]"}], 
+    ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<\|01f4c1 Saved in: \>\"", ",", "exportDir"}], "]"}], 
+    ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.991434615501343*^9, 3.991434615501343*^9}, {
+   3.9915116313332386`*^9, 3.9915116316162605`*^9}, {3.991512704086193*^9, 
+   3.9915127052728214`*^9}, {3.991512739911068*^9, 3.991512758505377*^9}, {
+   3.9915136422764206`*^9, 3.991513642729061*^9}, {3.9915145179316807`*^9, 
+   3.9915145182301693`*^9}, {3.9915156160875893`*^9, 
+   3.9915156163662434`*^9}, {3.991516517715103*^9, 3.9915165179730015`*^9}, {
+   3.9915173398820553`*^9, 3.991517340224537*^9}, {3.991518180123432*^9, 
+   3.9915181805644665`*^9}, 3.9915190298628807`*^9, {3.991609513581808*^9, 
+   3.991609541879818*^9}, {3.997159695422674*^9, 3.9971597008871574`*^9}, {
+   3.997159794665003*^9, 
+   3.9971597950913143`*^9}},ExpressionUUID->"c0545c51-7106-ce4e-8332-\
+e082f40f33f6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Exporting to: \"\>", 
+   "\[InvisibleSpace]", "\<\"C:\\\\Users\\\\Abhishek\\\\Downloads\\\\\"\>"}],
+  SequenceForm["Exporting to: ", "C:\\Users\\Abhishek\\Downloads\\"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.991511662539253*^9, 3.991512778386324*^9, 
+  3.991513657680521*^9, 3.9915145350986137`*^9, 3.9915156371883736`*^9, 
+  3.991516533114456*^9, 3.99151735945455*^9, 3.991518199557474*^9, 
+  3.9915190448091736`*^9, 3.991609553589178*^9, 3.9916096012448273`*^9},
+ CellLabel->
+  "During evaluation of \
+In[41]:=",ExpressionUUID->"9a4eb31e-083f-4a47-905e-9a3d2766c753"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Generating data for a = \"\>", "\[InvisibleSpace]", "0.9`"}],
+  SequenceForm["Generating data for a = ", 0.9],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.991511662539253*^9, 3.991512778386324*^9, 
+  3.991513657680521*^9, 3.9915145350986137`*^9, 3.9915156371883736`*^9, 
+  3.991516533114456*^9, 3.99151735945455*^9, 3.991518199557474*^9, 
+  3.9915190448091736`*^9, 3.991609553589178*^9, 3.9916096012503223`*^9},
+ CellLabel->
+  "During evaluation of \
+In[41]:=",ExpressionUUID->"000dff95-89fa-5641-9b3c-d32c903f1a42"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Grid: \"\>", "\[InvisibleSpace]", "51", 
+   "\[InvisibleSpace]", "\<\" z-points \[Times] \"\>", "\[InvisibleSpace]", 
+   "51", "\[InvisibleSpace]", "\<\" chi-points\"\>"}],
+  SequenceForm["Grid: ", 51, " z-points \[Times] ", 51, " chi-points"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.991511662539253*^9, 3.991512778386324*^9, 
+  3.991513657680521*^9, 3.9915145350986137`*^9, 3.9915156371883736`*^9, 
+  3.991516533114456*^9, 3.99151735945455*^9, 3.991518199557474*^9, 
+  3.9915190448091736`*^9, 3.991609553589178*^9, 3.9916096012503223`*^9},
+ CellLabel->
+  "During evaluation of \
+In[41]:=",ExpressionUUID->"d97d9ca9-00f8-ba4f-90f1-9d5e56bfa96d"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\:2705 Exported: \"\>", 
+   "\[InvisibleSpace]", \
+"\<\"C:\\\\Users\\\\Abhishek\\\\Downloads\\\\data_a_50_0.9.json\"\>"}],
+  SequenceForm[
+  "\:2705 Exported: ", "C:\\Users\\Abhishek\\Downloads\\data_a_50_0.9.json"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.991511662539253*^9, 3.991512778386324*^9, 
+  3.991513657680521*^9, 3.9915145350986137`*^9, 3.9915156371883736`*^9, 
+  3.991516533114456*^9, 3.99151735945455*^9, 3.991518199557474*^9, 
+  3.9915190448091736`*^9, 3.991609553589178*^9, 3.991611793539999*^9},
+ CellLabel->
+  "During evaluation of \
+In[41]:=",ExpressionUUID->"77ac4309-3ead-0443-a31f-6fb7f8706bde"],
+
+Cell[BoxData["\<\"\|01f4ca File contains all 10 fields\"\>"], "Print",
+ CellChangeTimes->{3.991511662539253*^9, 3.991512778386324*^9, 
+  3.991513657680521*^9, 3.9915145350986137`*^9, 3.9915156371883736`*^9, 
+  3.991516533114456*^9, 3.99151735945455*^9, 3.991518199557474*^9, 
+  3.9915190448091736`*^9, 3.991609553589178*^9, 3.9916117935435295`*^9},
+ CellLabel->
+  "During evaluation of \
+In[41]:=",ExpressionUUID->"4ecee1ff-693d-ef43-99a0-b665911554e3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\|01f4c1 Saved in: \"\>", 
+   "\[InvisibleSpace]", "\<\"C:\\\\Users\\\\Abhishek\\\\Downloads\\\\\"\>"}],
+  SequenceForm["\|01f4c1 Saved in: ", "C:\\Users\\Abhishek\\Downloads\\"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.991511662539253*^9, 3.991512778386324*^9, 
+  3.991513657680521*^9, 3.9915145350986137`*^9, 3.9915156371883736`*^9, 
+  3.991516533114456*^9, 3.99151735945455*^9, 3.991518199557474*^9, 
+  3.9915190448091736`*^9, 3.991609553589178*^9, 3.9916117935448036`*^9},
+ CellLabel->
+  "During evaluation of \
+In[41]:=",ExpressionUUID->"f3fc0d96-cd34-ca4d-9451-86d525703deb"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{571.8, 524.4},
+WindowMargins->{{284.4, Automatic}, {12, Automatic}},
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ffaf2a48-7b78-6848-a901-c6822c41a78d"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 14304, 376, 2205, "Input",ExpressionUUID->"c0545c51-7106-ce4e-8332-e082f40f33f6"],
+Cell[CellGroupData[{
+Cell[14905, 402, 631, 12, 22, "Print",ExpressionUUID->"9a4eb31e-083f-4a47-905e-9a3d2766c753"],
+Cell[15539, 416, 572, 11, 22, "Print",ExpressionUUID->"000dff95-89fa-5641-9b3c-d32c903f1a42"],
+Cell[16114, 429, 706, 13, 22, "Print",ExpressionUUID->"d97d9ca9-00f8-ba4f-90f1-9d5e56bfa96d"],
+Cell[16823, 444, 676, 14, 22, "Print",ExpressionUUID->"77ac4309-3ead-0443-a31f-6fb7f8706bde"],
+Cell[17502, 460, 453, 7, 22, "Print",ExpressionUUID->"4ecee1ff-693d-ef43-99a0-b665911554e3"],
+Cell[17958, 469, 641, 12, 22, "Print",ExpressionUUID->"f3fc0d96-cd34-ca4d-9451-86d525703deb"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
