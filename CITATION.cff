@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below and the pure-sector solutions of Lam, Chung & Yunes listed under references."
+title: "Mixed-order sGB-dCS corrections to rotating black holes: code and data"
+type: software
+license: MIT
+version: 1.0.0
+date-released: 2026-11-03
+authors:
+  - family-names: Rout
+    given-names: Abhishek
+    affiliation: "University of South Carolina"
+  - family-names: Altschul
+    given-names: Brett
+    affiliation: "University of South Carolina"
+preferred-citation:
+  type: article
+  title: "Mixed-Order Parity-Violating Corrections to Rotating Black Holes in Combined Scalar Gauss-Bonnet and Dynamical Chern-Simons Gravity"
+  authors:
+    - family-names: Rout
+      given-names: Abhishek
+    - family-names: Altschul
+      given-names: Brett
+  year: 2026
+  journal: "Physical Review D (submitted)"
+references:
+  - type: article
+    title: "Analytic and accurate approximate metrics for black holes with arbitrary rotation in beyond-Einstein gravity using spectral methods"
+    authors:
+      - family-names: Lam
+        given-names: Kelvin Ka-Ho
+      - family-names: Chung
+        given-names: Adrian Ka-Wai
+      - family-names: Yunes
+        given-names: Nicolás
+    journal: "Physical Review D"
+    volume: 113
+    start: "024030"
+    year: 2026
+    doi: "10.1103/txxb-z8bx"
+    identifiers:
+      - type: other
+        value: "arXiv:2510.05208"

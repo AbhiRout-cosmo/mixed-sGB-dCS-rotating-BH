@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.old.json
+.ipynb_checkpoints/
+# outputs written into data/ when the scripts are run there
+data/*.csv
+data/sweep_corrected.json
+data/analysis_numbers.json
+data/spherical_orbits_*.json
+data/trunc_*.json
