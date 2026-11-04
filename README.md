@@ -1,6 +1,7 @@
 # Mixed-order sGB–dCS corrections to rotating black holes
 
 [![arXiv](https://img.shields.io/badge/arXiv-2611.04945-b31b1b.svg)](https://arxiv.org/abs/2611.04945)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23941178.svg)](https://doi.org/10.5281/zenodo.23941178)
 
 Code and data for
 
@@ -129,7 +130,7 @@ The pure-sector metric functions and scalars are the spectral solutions of Lam, 
 
 ## Citation
 
-If you use this code or data, please cite the paper above (see `CITATION.cff`) and Lam, Chung & Yunes, Phys. Rev. D 113, 024030 (2026), for the pure-sector solutions.
+If you use this code or data, please cite the paper above and the archived code and data, doi:[10.5281/zenodo.23941178](https://doi.org/10.5281/zenodo.23941178) (all versions; v1.0 is [10.5281/zenodo.23941179](https://doi.org/10.5281/zenodo.23941179)) (see `CITATION.cff`), and Lam, Chung & Yunes, Phys. Rev. D 113, 024030 (2026), for the pure-sector solutions.
 
 ## License
 

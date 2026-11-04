@@ -12,6 +12,14 @@ keywords:
   - spectral methods
 license: MIT
 version: 1.0.0
+doi: 10.5281/zenodo.23941178
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23941178
+    description: "Zenodo archive, all versions"
+  - type: doi
+    value: 10.5281/zenodo.23941179
+    description: "Zenodo archive of release v1.0"
 date-released: 2026-11-04
 authors:
   - family-names: Rout
