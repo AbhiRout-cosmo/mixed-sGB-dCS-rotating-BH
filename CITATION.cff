@@ -2,9 +2,17 @@ cff-version: 1.2.0
 message: "If you use this code or data, please cite the paper below and the pure-sector solutions of Lam, Chung & Yunes listed under references."
 title: "Mixed-order sGB-dCS corrections to rotating black holes: code and data"
 type: software
+abstract: "Pseudospectral solver, mixed-order solutions for spins 0.1-0.9, and scripts that reproduce every observable, table and consistency check of the leading mixed-order O(zeta_GB zeta_CS) corrections to rotating black holes in combined scalar Gauss-Bonnet and dynamical Chern-Simons gravity (arXiv:2611.04945)."
+keywords:
+  - modified gravity
+  - black holes
+  - dynamical Chern-Simons gravity
+  - scalar Gauss-Bonnet gravity
+  - effective field theory
+  - spectral methods
 license: MIT
 version: 1.0.0
-date-released: 2026-11-03
+date-released: 2026-11-04
 authors:
   - family-names: Rout
     given-names: Abhishek
@@ -21,6 +29,11 @@ preferred-citation:
     - family-names: Altschul
       given-names: Brett
   year: 2026
+  url: "https://arxiv.org/abs/2611.04945"
+  identifiers:
+    - type: other
+      value: "arXiv:2611.04945"
+      description: "arXiv preprint"
 references:
   - type: article
     title: "Analytic and accurate approximate metrics for black holes with arbitrary rotation in beyond-Einstein gravity using spectral methods"

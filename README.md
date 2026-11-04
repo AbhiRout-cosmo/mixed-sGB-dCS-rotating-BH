@@ -1,8 +1,10 @@
 # Mixed-order sGB–dCS corrections to rotating black holes
 
+[![arXiv](https://img.shields.io/badge/arXiv-2611.04945-b31b1b.svg)](https://arxiv.org/abs/2611.04945)
+
 Code and data for
 
-> A. Rout and B. Altschul, *Mixed-Order Parity-Violating Corrections to Rotating Black Holes in Combined Scalar Gauss–Bonnet and Dynamical Chern–Simons Gravity* (2026), arXiv number to follow.
+> A. Rout and B. Altschul, *Mixed-Order Parity-Violating Corrections to Rotating Black Holes in Combined Scalar Gauss–Bonnet and Dynamical Chern–Simons Gravity*, [arXiv:2611.04945](https://arxiv.org/abs/2611.04945) (2026).
 
 The pure-sector (leading-order sGB and dCS) solutions on which the mixed-order calculation is built are those of
 
